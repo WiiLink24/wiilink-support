@@ -1,0 +1,10 @@
+const { SlashCommandBuilder } = require('discord.js');
+
+module.exports = {
+	data: new SlashCommandBuilder()
+		.setName('regionfix')
+		.setDescription('Region fix for the Food Channel'),
+	async execute(interaction) {
+		await interaction.reply("# Fixing the 'This channel can't be used' error\nThis is a temporary fix, as it's unknown what is causing it at the moment.\nA patch is being developed for this, so please wait and keep an eye on #order-announcements.\nThanks to @HBH#0001.\n## What you'll need\n- [ShowMiiWads](<https://github.com/modmii/modmii.github.io/blob/master/temp/ShowMiiWads-Mod-1.5.2.zip>)\n- The WAD file (you should already have this, if not, follow the guide)\n## Steps\nFix 1 and 2 are easiest, so we recommend trying either of those first.\n### Fix 1 (Priiloader on Wii)\n1. Launch Priiloader by holding RESET when you turn on your Wii.\n2. Use the Wii remote or GameCube controller's D-pad to navigate to \"System Menu Hacks\" and press A.\n3. Go down until you find \"Region Free Everything\", and enable it by pressing A.\n4. Go to the bottom and press \"save settings\", then go to \"System Menu\".\nThe channel should now launch.\n### Fix 2 (Priiloader on vWii)\nThis is untested, so it may not work. If it doesn't work for you, try Fix 3.\n1. Launch Priiloader\n2. Navigate to \"System Menu Hacks\" using your Wii remote's D-pad and press A.\n3. Scroll down until you find \"Region Free Everything\" and press A to enable it.\n4. Go to the bottom and press \"save settings\", then go to \"System Menu\".\n### Fix 3 (Either)\n1. Open ShowMiiWads, select `I accept and take the risk of WAD editing features` and press OK\n2. Press `CTRL + O` and select the folder where you put your WAD.\n3. Right click \"Food Channel (Deliveroo)\", navigate to \"Change Region Flag\" and select Region Free.\n4. Install the channel on your Wii");
+	},
+};
